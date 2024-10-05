@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drug Genesis</title>
+</head>
+<body>
+    <header>
+        <h1>Drug Genesis</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="compound-details.html">Compound Details</a>
+            <a href="search-results.html">Search Results</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="upload-section">
+            <h2>Upload a CSV File</h2>
+            <form class="upload-form" id="uploadForm" action="process-upload.php" method="POST" enctype="multipart/form-data">
+                <input type="file" name="datafile" id="csvFileInput" accept=".csv" required />
+                <button type="submit">Upload</button>
+                <p id="uploadStatus"></p> <!-- This paragraph will show the file name -->
+            </form>
+            <p>Upload a CSV file containing drug data to find similar compounds.</p>
+        </div>
+
+        <section class="compound-list" id="compoundList">
+            <h2>Available Compounds</h2>
+            <!-- Compound cards will be generated here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Drug Genesis. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
